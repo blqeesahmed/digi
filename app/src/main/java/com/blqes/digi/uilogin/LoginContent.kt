@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -76,8 +77,12 @@ fun LoginContent(
         when (state) {
             is LoginState.Loading -> CircularProgressIndicator()
             is LoginState.Error -> Text(state.message, color = Color.Red)
-            is LoginState.Success -> onLoginSuccess()
             else -> {}
+        }
+        LaunchedEffect(state) {
+            if (state is LoginState.Success) {
+                onLoginSuccess()
+            }
         }
     }
 }
@@ -86,8 +91,10 @@ fun LoginContent(
 @Preview
 private fun Login() {
     LoginContent(
+
         authViewModel = AuthViewModel(),
         onLoginSuccess = {}
+
     )
 
 }

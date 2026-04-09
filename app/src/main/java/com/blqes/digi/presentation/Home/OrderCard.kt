@@ -32,7 +32,7 @@ fun OrderCard(order: Order) {
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        // 1️⃣ الأيقونة
+
         Icon(
             imageVector = order.icon,
             contentDescription = null,
@@ -42,7 +42,7 @@ fun OrderCard(order: Order) {
 
         Spacer(modifier = Modifier.width(12.dp))
 
-        // 2️⃣ الكلام (العنوان والتاريخ)
+
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = order.title,
@@ -57,7 +57,7 @@ fun OrderCard(order: Order) {
 
         Spacer(modifier = Modifier.width(12.dp))
 
-        // 3️⃣ البوكس اللي فيه مكتمل أو جاري
+
         Box(
             modifier = Modifier
                 .background(

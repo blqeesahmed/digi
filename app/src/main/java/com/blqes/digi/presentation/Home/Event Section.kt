@@ -1,4 +1,4 @@
-package com.blqes.digi.presentation
+package com.blqes.digi.presentation.Home
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement

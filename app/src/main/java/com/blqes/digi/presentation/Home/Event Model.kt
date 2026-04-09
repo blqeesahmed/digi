@@ -1,4 +1,4 @@
-package com.blqes.digi.presentation
+package com.blqes.digi.presentation.Home
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
